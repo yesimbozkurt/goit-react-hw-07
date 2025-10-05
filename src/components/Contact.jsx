@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from '../redux/contactsSlice';
 import toast from 'izitoast';
 import css from './Contact.module.css';
+import { FaPhoneAlt, FaUser } from 'react-icons/fa';
 
 const Contact = ({ contact }) => {
     const dispatch = useDispatch();
@@ -20,8 +21,10 @@ const Contact = ({ contact }) => {
     }
     return (
         <div className={css.contact}>
-            {/* // react icon ekle */}
-            <span className={css.contactName}>{contact.name}: {contact.number}</span>
+            <div className={css.contactInfo}>
+                <span className={css.contactName}><FaUser /> {contact.name}: </span>
+                <span className={css.contactPhone}><FaPhoneAlt /> {contact.number}</span>
+            </div>
             <button onClick={handleDelete} className={css.button}>Delete</button>
         </div>
     )

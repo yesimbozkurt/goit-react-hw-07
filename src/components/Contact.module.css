@@ -12,8 +12,26 @@
     margin-bottom: 10px;
 }
 
+.contactInfo {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
 .contactName {
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.contactPhone {
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
 }
 
 .button {
