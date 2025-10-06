@@ -9,6 +9,19 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.loader {
+    color: red;
+    animation: spin 1s linear infinite;
+    font-size: 32px;
+    margin: auto;
+}
+
+.noContacts {
+    color: red;
+    font-weight: bold;
+    background-color: rgb(169, 163, 163);
+}
+
 .list {
     padding: 0;
     margin: 0;
