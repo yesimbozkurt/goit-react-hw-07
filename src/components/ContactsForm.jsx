@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { addContact } from '../redux/contactsSlice';
-import { nanoid } from 'nanoid';
+import { addContact } from '../redux/operations';
+// import { nanoid } from 'nanoid';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import 'izitoast/dist/css/iziToast.min.css';
 import toast from 'izitoast';
@@ -15,13 +15,12 @@ const ContactsForm = () => {
         number: '',
     };
     const handleSubmit = (values, actions) => {
-        console.log(values);
-        const newContact = {
-            id: nanoid(),
-            name: values.name.trim(),
-            number: values.number.trim(),
-        }
-        dispatch(addContact(newContact));
+        // const newContact = {
+        //     id: nanoid(),
+        //     name: values.name.trim(),
+        //     number: values.number.trim(),
+        // }
+        dispatch(addContact(values));
         toast.success({
             title: 'Success',
             message: 'Contact added successfully!',
