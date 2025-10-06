@@ -7,7 +7,6 @@ import { useEffect } from 'react'
 import { fetchContacts } from './redux/operations'
 import { useDispatch, useSelector } from 'react-redux'
 import { LuLoaderCircle } from 'react-icons/lu'
-import axios from 'axios'
 
 function App() {
   const dispatch = useDispatch();
@@ -15,12 +14,6 @@ function App() {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
-  useEffect(() => {
-    axios.get("https://68e41da98e116898997b0a25.mockapi.io/contacts")
-      .then(res => console.log(res.data))
-      .catch(err => console.error(err.message));
-  }, []);
-
 
   return (
     <>

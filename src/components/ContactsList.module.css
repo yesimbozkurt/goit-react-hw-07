@@ -1,7 +1,12 @@
-.ContactsList {
+.contactsList {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid #a7a5a5;
+    border-radius: 8px;
+    background-color: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .list {
@@ -11,5 +16,5 @@
 }
 
 .listItem {
-    width: 400px;
+    width: 350px;
 }
